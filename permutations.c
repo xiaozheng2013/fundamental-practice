@@ -1,3 +1,7 @@
+
+// http://www.cplusplus.com/forum/articles/10/, see this article to find the difference between 
+// a pointer and an array. Which we should be very careful when we try to use pointers, we should
+// always keep in mind to allocate memory to it.
 //print out all permutations of an array.
 #include<stdio.h>
 #define L 6
