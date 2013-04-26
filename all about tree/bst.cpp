@@ -17,6 +17,9 @@ int main()
 	a.add(3);
 	a.add(4);
 	a.display(0);
+	cout<<endl;
+	a.display(1);
+	cout<<endl;
 	return 0;
 
 }
