@@ -15,6 +15,8 @@ void tree::display(int i)
 		root->display();
 		if(i == 1)
 		root->dfs();
+		if(i == 2)
+		root->bfs();
 	}
 }
 

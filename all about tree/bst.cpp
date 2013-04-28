@@ -8,18 +8,25 @@ several mistakes: (1) forget to code default constructor in line 29
 */
 
 #include "tree.h"
-
+#include<iostream>
+using namespace std;
 int main()
 {
 	tree a; 
-	a.add(1);
-	a.add(2);
-	a.add(3);
 	a.add(4);
+	a.add(2);
+	a.add(5);
+	a.add(1);
+	a.add(3);
+	a.add(6);
+	a.add(7);
+	cout<<"pre-order ergodic: ";
 	a.display(0);
 	cout<<endl;
+	cout<<"Depth-first ergodic: ";
 	a.display(1);
-	cout<<endl;
+	cout<<"Breadth-first ergodic: ";
+	a.display(2);
 	return 0;
 
 }

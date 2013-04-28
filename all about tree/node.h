@@ -6,6 +6,9 @@ start: 13:13, 2013/4/24
 several mistakes: (1) forget to code default constructor in line 29
 				(2) forget to add size by one after adding a new node
 */
+#ifndef NODE_H
+#define NODE_H
+ 
 #include<iostream>
 class node{
 public:
@@ -18,5 +21,7 @@ public:
 
 	void display();
 	void dfs();
+	void bfs();
 };
 
+#endif

@@ -1,5 +1,13 @@
 //#include "node.h"
 #include "stack.h"
+
+#ifndef __NODE_H_INCLUDED__   // if x.h hasn't been included yet...
+#define __NODE_H_INCLUDED__   //   #define this so the compiler knows it has been included
+
+#include "node.h"
+#endif 
+
+#include "queue.h"
 #include<iostream>
 using namespace std;
 
@@ -43,9 +51,35 @@ void node::dfs()
 		}
 		else visit.pop();
 	}
-		cout<<"dfs result:"; 
 	for(int i=0;i<visited.size();i++)
 		cout<<visited[i].val<<" ";
 	cout<<endl;
+}
+
+void node::bfs()
+{
+	vector<node> visited;
+	Queue visit;
+	visit.enQueue(*this);
+	visited.push_back(*this);
+	while(visit.isEmpty() == 0)
+	{
+		node tmp = visit.top();
+		if(contain(visited,tmp.lch) == 0 )
+		{	
+			visited.push_back(*(tmp.lch));
+			visit.enQueue(*(tmp.lch));
+		}
+		if(contain(visited,tmp.rch) == 0 )
+		{	
+			visited.push_back(*(tmp.rch));
+			visit.enQueue(*(tmp.rch));
+		}
+		visit.deQueue();
+	}
+	for(int i=0;i<visited.size();i++)
+		cout<<visited[i].val<<" ";
+	cout<<endl;	
+
 }
 
