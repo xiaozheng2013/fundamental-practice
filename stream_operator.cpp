@@ -21,7 +21,7 @@ public:
 	
 	friend ostream& operator<<(ostream& os, const state& t)
 	{
-		cout<<"the milk contained in each bucket is : "<<t.a
+		os<<"the milk contained in each bucket is : "<<t.a
 			<<" "<<t.b<<" "<<t.c<<" "<<endl;
 	}
 	
